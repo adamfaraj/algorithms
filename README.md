@@ -3,7 +3,7 @@ Here's a list of some algorithms and data structures, grouped by category, that 
 # Sorting Algorithms:
 
 - Merge Sort: O(*n* log *n*) average and worst-case time complexity. It's also stable.
-- Quick Sort: O(*n* log *n*) average time complexity, but O(n<sup>2<sup>) in the worst case. It's generally faster in practice than other O(*n* log *n*) algorithms.
+- Quick Sort: O(*n* log *n*) average time complexity, but O(n<sup>2</sup>) in the worst case. It's generally faster in practice than other O(*n* log *n*) algorithms.
 - Counting Sort, Radix Sort, Bucket Sort: Linear time non-comparison sorts, but they are not universally applicable like Merge or Quick Sort.
 
 # Search and Traversal Algorithms:
