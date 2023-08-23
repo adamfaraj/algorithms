@@ -1,25 +1,25 @@
 function countingSort(arr) {
+  if (arr.length <= 1) return arr;
+
   // Find the maximum value in the array
   let max = Math.max(...arr);
 
-  // Create a count array
-  let count = new Array(max + 1).fill(0);
+  // Initialize the count array with zeros
+  let countArray = new Array(max + 1).fill(0);
 
-  // Increment the count array for each element in the input array
+  // Populate the count array with frequencies of each value in the input array
   for (let i = 0; i < arr.length; i++) {
-    count[arr[i]]++;
+      countArray[arr[i]]++;
   }
 
-  // Create an output array
-  let output = new Array(arr.length);
-
-  // Iterate over the count array and place the elements in the output array
-  for (let i = 0; i <= max; i++) {
-    for (let j = 0; j < count[i]; j++) {
-      output[j] = i;
-    }
+  // Reconstruct the sorted output from the count array
+  let outputIndex = 0;
+  for (let i = 0; i < countArray.length; i++) {
+      while (countArray[i] > 0) {
+          arr[outputIndex++] = i;
+          countArray[i]--;
+      }
   }
 
-  // Return the sorted array
-  return output;
+  return arr;
 }
